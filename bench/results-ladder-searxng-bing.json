@@ -1,0 +1,44 @@
+[
+  {
+    "label": "searxng",
+    "target_rps": 2.0,
+    "duration": 120,
+    "sent": 240,
+    "wall": 120.0,
+    "useful": 240,
+    "useful_pct": 100.0,
+    "achieved_rps": 2.0,
+    "per_day": 172818,
+    "p50": 0.49,
+    "p95": 1.12,
+    "mean_results": 10.0,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 30,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 90,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {},
+    "held": true
+  }
+]

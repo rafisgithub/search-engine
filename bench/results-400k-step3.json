@@ -1,0 +1,467 @@
+[
+  {
+    "label": "openserp/ecosia",
+    "target_rps": 0.926,
+    "duration": 360,
+    "sent": 333,
+    "wall": 358.5,
+    "useful": 0,
+    "useful_pct": 0.0,
+    "achieved_rps": 0.0,
+    "per_day": 0,
+    "p50": 0,
+    "p95": 0,
+    "mean_results": 0,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 30,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 60,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 90,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 120,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 150,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 180,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 210,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 240,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 270,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 300,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 330,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      }
+    ],
+    "fail_reasons": {
+      "blocked": 28,
+      "captcha_detected": 2,
+      "circuit_open": 303
+    },
+    "held": false
+  },
+  {
+    "label": "openserp/google",
+    "target_rps": 0.926,
+    "duration": 360,
+    "sent": 333,
+    "wall": 358.5,
+    "useful": 0,
+    "useful_pct": 0.0,
+    "achieved_rps": 0.0,
+    "per_day": 0,
+    "p50": 0,
+    "p95": 0,
+    "mean_results": 0,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 30,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 60,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 90,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 120,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 150,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 180,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 210,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 240,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 270,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 300,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 330,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      }
+    ],
+    "fail_reasons": {
+      "captcha_detected": 2,
+      "blocked": 33,
+      "circuit_open": 298
+    },
+    "held": false
+  },
+  {
+    "label": "openserp/yandex",
+    "target_rps": 0.926,
+    "duration": 360,
+    "sent": 333,
+    "wall": 360.5,
+    "useful": 2,
+    "useful_pct": 0.6,
+    "achieved_rps": 0.01,
+    "per_day": 479,
+    "p50": 17.79,
+    "p95": 8.75,
+    "mean_results": 10,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 28,
+        "useful": 1,
+        "pct": 3.6
+      },
+      {
+        "t": 30,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 60,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 90,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 120,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 150,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 180,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 210,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 240,
+        "sent": 28,
+        "useful": 1,
+        "pct": 3.6
+      },
+      {
+        "t": 270,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 300,
+        "sent": 28,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 330,
+        "sent": 27,
+        "useful": 0,
+        "pct": 0.0
+      }
+    ],
+    "fail_reasons": {
+      "captcha_detected": 60,
+      "circuit_open": 271
+    },
+    "held": false
+  },
+  {
+    "label": "openserp/bing",
+    "target_rps": 0.926,
+    "duration": 360,
+    "sent": 333,
+    "wall": 364.7,
+    "useful": 333,
+    "useful_pct": 100.0,
+    "achieved_rps": 0.91,
+    "per_day": 78896,
+    "p50": 8.9,
+    "p95": 21.29,
+    "mean_results": 9.8,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 30,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 90,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 120,
+        "sent": 27,
+        "useful": 27,
+        "pct": 100.0
+      },
+      {
+        "t": 150,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 180,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 210,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 240,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 270,
+        "sent": 27,
+        "useful": 27,
+        "pct": 100.0
+      },
+      {
+        "t": 300,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 330,
+        "sent": 27,
+        "useful": 27,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {},
+    "held": true
+  },
+  {
+    "label": "openserp/duckduckgo",
+    "target_rps": 0.926,
+    "duration": 360,
+    "sent": 333,
+    "wall": 370.2,
+    "useful": 288,
+    "useful_pct": 86.5,
+    "achieved_rps": 0.78,
+    "per_day": 67213,
+    "p50": 22.48,
+    "p95": 35.52,
+    "mean_results": 9.9,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 28,
+        "useful": 27,
+        "pct": 96.4
+      },
+      {
+        "t": 30,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 28,
+        "useful": 17,
+        "pct": 60.7
+      },
+      {
+        "t": 90,
+        "sent": 28,
+        "useful": 24,
+        "pct": 85.7
+      },
+      {
+        "t": 120,
+        "sent": 27,
+        "useful": 27,
+        "pct": 100.0
+      },
+      {
+        "t": 150,
+        "sent": 28,
+        "useful": 22,
+        "pct": 78.6
+      },
+      {
+        "t": 180,
+        "sent": 28,
+        "useful": 26,
+        "pct": 92.9
+      },
+      {
+        "t": 210,
+        "sent": 28,
+        "useful": 7,
+        "pct": 25.0
+      },
+      {
+        "t": 240,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 270,
+        "sent": 27,
+        "useful": 27,
+        "pct": 100.0
+      },
+      {
+        "t": 300,
+        "sent": 28,
+        "useful": 28,
+        "pct": 100.0
+      },
+      {
+        "t": 330,
+        "sent": 27,
+        "useful": 27,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {
+      "search_timeout": 7,
+      "proxy_timeout": 6,
+      "request_timeout": 32
+    },
+    "held": false
+  }
+]

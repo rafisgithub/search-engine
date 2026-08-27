@@ -10,7 +10,7 @@ Two things here are load-bearing, and both were mistakes in the first draft:
    `cache.ttl_seconds` (120s by default), and a repeated query returns in
    ~1ms instead of ~2s -- that measures the cache, not the search engine.
 """
-import itertools, json, os, statistics as st, threading, time
+import itertools, json, math, os, statistics as st, threading, time
 import urllib.error, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
@@ -37,9 +37,15 @@ QUERIES = [" ".join(c) for c in itertools.combinations(WORDS, 2)]
 
 
 def url_for(which, query, engine=None):
+    """SearXNG takes `engine` too: without it the query fans out to the whole
+    general category (brave/ddg/google cse/startpage), so ONE blocked engine
+    drags the result set to empty. Pinning a single engine is what makes a
+    like-for-like comparison against an OpenSERP endpoint possible."""
     q = query.replace(" ", "+")
     if which == "openserp":
         return f"{OPENSERP}/{engine}/search?text={q}&lang=EN&limit=10"
+    if engine:
+        return f"{SEARXNG}/search?q={q}&format=json&engines={engine.replace(' ', '+')}"
     return f"{SEARXNG}/search?q={q}&format=json"
 
 
@@ -76,18 +82,48 @@ def probe(url, timeout=120):
 
 # Global cursor so successive runs in one process never replay a query into
 # OpenSERP's 120s cache.
-_cursor = itertools.count(0)
+_cursor = 0
 _cursor_lock = threading.Lock()
 
 
-def take_queries(n):
+def seed_cursor(offset):
+    """Force the next take_queries() to start at `offset`.
+
+    The cursor is per-PROCESS, and sustain.py is a fresh process every run, so
+    back-to-back runs both start at 0 and replay the same queries into
+    OpenSERP's `cache.ttl_seconds` window -- measuring the cache, not the
+    engine. That is the same trap burst.py's --offset exists to avoid; this
+    gives sustain.py the equivalent. protocol.py needs no offset because it
+    calls sustained() repeatedly inside ONE process, where the cursor already
+    advances on its own.
+    """
+    global _cursor
     with _cursor_lock:
-        start = next(_cursor)
-        for _ in range(n - 1):
-            next(_cursor)
+        _cursor = offset
+
+
+def take_queries(n):
+    global _cursor
+    with _cursor_lock:
+        start = _cursor
+        _cursor += n
     if start + n > len(QUERIES):
         raise SystemExit(f"query pool exhausted: needed {n} from {start}, pool is {len(QUERIES)}")
     return QUERIES[start:start + n]
+
+
+def p95_of(sorted_vals):
+    """Nearest-rank p95 that can never fall BELOW the median.
+
+    The old `lat[int(.95 * len(lat)) - 1]` truncated instead of rounding up, so
+    small samples indexed backwards: with 2 useful results it computed
+    int(1.9)-1 = 0 -- the FASTEST request. That is how a yandex run came out
+    p50=17.79 / p95=8.75, a p95 below its own p50.
+    """
+    if not sorted_vals:
+        return 0
+    i = min(len(sorted_vals) - 1, max(0, math.ceil(.95 * len(sorted_vals)) - 1))
+    return sorted_vals[i]
 
 
 def sustained(which, rps, duration, engine=None, bucket=30, label=None, quiet=False):
@@ -138,7 +174,7 @@ def sustained(which, rps, duration, engine=None, bucket=30, label=None, quiet=Fa
         "useful": len(good), "useful_pct": round(100 * len(good) / len(rows), 1) if rows else 0,
         "achieved_rps": round(len(good) / wall, 2),
         "per_day": int(len(good) / wall * 86400),
-        "p50": round(st.median(lat), 2), "p95": round(lat[int(.95 * len(lat)) - 1], 2),
+        "p50": round(st.median(lat), 2), "p95": round(p95_of(lat), 2),
         "mean_results": round(st.mean([r["n"] for r in good]), 1) if good else 0,
         "buckets": buckets, "fail_reasons": why,
         # Held = no bucket collapsed. A run that averages 80% but ends at 0%

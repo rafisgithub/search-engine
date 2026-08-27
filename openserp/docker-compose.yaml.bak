@@ -21,10 +21,8 @@ services:
     # the container's IPC isolation from the host.
     shm_size: 2gb
 
-    # NOT -l: leakless kills the Chrome process after EVERY search, which
-    # defeats app.idle_ttl browser reuse and makes each request pay a full
-    # Chrome cold start (~4.9s p50). Reuse is worth far more than the cleanup.
-    command: serve
+    # -l / --leakless: force browser processes to be killed after each search.
+    command: serve -l
 
     ports:
       # Loopback only — OpenSERP has NO authentication. Change to "7000:7000"

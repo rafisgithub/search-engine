@@ -1,0 +1,176 @@
+[
+  {
+    "label": "openserp/bing",
+    "target_rps": 1.0,
+    "duration": 180,
+    "sent": 180,
+    "wall": 184.3,
+    "useful": 180,
+    "useful_pct": 100.0,
+    "achieved_rps": 0.98,
+    "per_day": 84401,
+    "p50": 4.86,
+    "p95": 5.6,
+    "mean_results": 9.8,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 30,
+        "useful": 30,
+        "pct": 100.0
+      },
+      {
+        "t": 30,
+        "sent": 30,
+        "useful": 30,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 30,
+        "useful": 30,
+        "pct": 100.0
+      },
+      {
+        "t": 90,
+        "sent": 30,
+        "useful": 30,
+        "pct": 100.0
+      },
+      {
+        "t": 120,
+        "sent": 30,
+        "useful": 30,
+        "pct": 100.0
+      },
+      {
+        "t": 150,
+        "sent": 30,
+        "useful": 30,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {},
+    "held": true,
+    "mem_before": "44.78MiB / 15.31GiB",
+    "chrome_before": "7",
+    "mem_after": "207.6MiB / 15.31GiB",
+    "chrome_after": "13"
+  },
+  {
+    "label": "openserp/bing",
+    "target_rps": 1.5,
+    "duration": 180,
+    "sent": 270,
+    "wall": 184.6,
+    "useful": 270,
+    "useful_pct": 100.0,
+    "achieved_rps": 1.46,
+    "per_day": 126366,
+    "p50": 4.87,
+    "p95": 5.86,
+    "mean_results": 9.5,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 45,
+        "useful": 45,
+        "pct": 100.0
+      },
+      {
+        "t": 30,
+        "sent": 45,
+        "useful": 45,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 45,
+        "useful": 45,
+        "pct": 100.0
+      },
+      {
+        "t": 90,
+        "sent": 45,
+        "useful": 45,
+        "pct": 100.0
+      },
+      {
+        "t": 120,
+        "sent": 45,
+        "useful": 45,
+        "pct": 100.0
+      },
+      {
+        "t": 150,
+        "sent": 45,
+        "useful": 45,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {},
+    "held": true,
+    "mem_before": "204.2MiB / 15.31GiB",
+    "chrome_before": "13",
+    "mem_after": "268.4MiB / 15.31GiB",
+    "chrome_after": "13"
+  },
+  {
+    "label": "openserp/bing",
+    "target_rps": 2.0,
+    "duration": 180,
+    "sent": 360,
+    "wall": 185.9,
+    "useful": 360,
+    "useful_pct": 100.0,
+    "achieved_rps": 1.94,
+    "per_day": 167307,
+    "p50": 7.29,
+    "p95": 9.3,
+    "mean_results": 9.8,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 30,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 90,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 120,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      },
+      {
+        "t": 150,
+        "sent": 60,
+        "useful": 60,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {},
+    "held": true,
+    "mem_before": "262.6MiB / 15.31GiB",
+    "chrome_before": "13",
+    "mem_after": "380.9MiB / 15.31GiB",
+    "chrome_after": "13"
+  }
+]

@@ -125,8 +125,14 @@ the host port while the app keeps listening on 8080 — you get `connection rese
 **Always pass a fresh `--offset`.** OpenSERP caches results for
 `cache.ttl_seconds` (120s). Replaying a query returns in ~1ms instead of ~2s, so
 overlapping runs measure the cache: an early draft reported 68 rps that way. The
-pool holds 9,591 unique queries; give each run a higher offset. `protocol.py`
-tracks a global cursor and never reuses one.
+pool holds 8,385 unique queries; give each run a higher offset. Both `burst.py`
+and `sustain.py` take `--offset`, and `protocol.py` needs none — it calls
+`sustained()` repeatedly inside ONE process, where the cursor advances by itself.
+
+The cursor is per-**process**, which is the trap: `sustain.py` is a fresh process
+every invocation, so two back-to-back runs both start at query 0 and the second
+one is scored against the first one's cache. Rule of thumb:
+`--offset >= previous offset + rps * duration`.
 
 **Never count HTTP 200 as success.** Both tools return 200 with zero results once
 upstream blocks them — that misread 71 rps of pure failure as throughput. Every
@@ -147,8 +153,9 @@ can be blocked while the other still works. `./bench/baseline.py` shows both.
 
 | file | what it does |
 |---|---|
-| `common.py` | query pool, `probe()`, `sustained()` — success = non-empty results |
+| `common.py` | query pool, `probe()`, `sustained()`, `p95_of()`, `seed_cursor()` — success = non-empty results |
 | `baseline.py` | engine-pool health; `--wait` blocks until recovered |
 | `burst.py` | closed-loop, N requests at fixed concurrency — finds the ceiling |
-| `sustain.py` | open-loop at a fixed arrival rate — finds what holds |
+| `sustain.py` | open-loop at a fixed arrival rate — finds what holds; `--offset` |
+| `ceiling.py` | app-layer ceiling with upstream removed — safe during a cooldown |
 | `protocol.py` | full A–D comparison with cooldowns, writes `results.json` |

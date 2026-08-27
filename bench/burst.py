@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import QUERIES, probe, url_for
+from common import QUERIES, p95_of, probe, url_for
 
 p = argparse.ArgumentParser()
 p.add_argument("which", choices=["openserp", "searxng"])
@@ -47,7 +47,7 @@ print(json.dumps({
     "useful": len(good), "useful_pct": round(100 * len(good) / len(res), 1),
     "rps_useful": round(len(good) / wall, 2),
     "per_day_useful": int(len(good) / wall * 86400),
-    "p50": round(st.median(lat), 2), "p95": round(lat[int(.95 * len(lat)) - 1], 2),
+    "p50": round(st.median(lat), 2), "p95": round(p95_of(lat), 2),
     "mean_results": round(st.mean([r["n"] for r in good]), 1) if good else 0,
     "fail_reasons": why,
 }, indent=2))

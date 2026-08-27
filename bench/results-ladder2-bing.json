@@ -1,0 +1,122 @@
+[
+  {
+    "label": "openserp/bing",
+    "target_rps": 2.5,
+    "duration": 180,
+    "sent": 450,
+    "wall": 189.4,
+    "useful": 450,
+    "useful_pct": 100.0,
+    "achieved_rps": 2.38,
+    "per_day": 205254,
+    "p50": 11.29,
+    "p95": 15.32,
+    "mean_results": 9.1,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 75,
+        "useful": 75,
+        "pct": 100.0
+      },
+      {
+        "t": 30,
+        "sent": 75,
+        "useful": 75,
+        "pct": 100.0
+      },
+      {
+        "t": 60,
+        "sent": 75,
+        "useful": 75,
+        "pct": 100.0
+      },
+      {
+        "t": 90,
+        "sent": 75,
+        "useful": 75,
+        "pct": 100.0
+      },
+      {
+        "t": 120,
+        "sent": 75,
+        "useful": 75,
+        "pct": 100.0
+      },
+      {
+        "t": 150,
+        "sent": 75,
+        "useful": 75,
+        "pct": 100.0
+      }
+    ],
+    "fail_reasons": {},
+    "held": true,
+    "mem_before": "114MiB / 15.31GiB",
+    "chrome_before": "12",
+    "mem_after": "312MiB / 15.31GiB",
+    "chrome_after": "12"
+  },
+  {
+    "label": "openserp/bing",
+    "target_rps": 3.0,
+    "duration": 180,
+    "sent": 540,
+    "wall": 198.0,
+    "useful": 277,
+    "useful_pct": 51.3,
+    "achieved_rps": 1.4,
+    "per_day": 120892,
+    "p50": 16.31,
+    "p95": 31.23,
+    "mean_results": 9.4,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 90,
+        "useful": 86,
+        "pct": 95.6
+      },
+      {
+        "t": 30,
+        "sent": 90,
+        "useful": 68,
+        "pct": 75.6
+      },
+      {
+        "t": 60,
+        "sent": 90,
+        "useful": 27,
+        "pct": 30.0
+      },
+      {
+        "t": 90,
+        "sent": 90,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 120,
+        "sent": 90,
+        "useful": 37,
+        "pct": 41.1
+      },
+      {
+        "t": 150,
+        "sent": 90,
+        "useful": 59,
+        "pct": 65.6
+      }
+    ],
+    "fail_reasons": {
+      "empty": 42,
+      "search_timeout": 19,
+      "circuit_open": 202
+    },
+    "held": false,
+    "mem_before": "294.4MiB / 15.31GiB",
+    "chrome_before": "12",
+    "mem_after": "608.7MiB / 15.31GiB",
+    "chrome_after": "12"
+  }
+]
