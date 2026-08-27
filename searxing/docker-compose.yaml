@@ -11,7 +11,7 @@
 # On first start the entrypoint writes ./core-config/settings.yml with a freshly
 # generated secret_key. Edit that file to configure engines, then restart.
 
-name: searxng
+name: searxing
 
 services:
   core:

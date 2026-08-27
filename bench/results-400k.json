@@ -1,0 +1,119 @@
+[
+  {
+    "label": "searxng @4.63",
+    "target_rps": 4.63,
+    "duration": 480,
+    "sent": 2222,
+    "wall": 479.7,
+    "useful": 165,
+    "useful_pct": 7.4,
+    "achieved_rps": 0.34,
+    "per_day": 29717,
+    "p50": 1.77,
+    "p95": 2.94,
+    "mean_results": 15.9,
+    "buckets": [
+      {
+        "t": 0,
+        "sent": 139,
+        "useful": 80,
+        "pct": 57.6
+      },
+      {
+        "t": 30,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 60,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 90,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 120,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 150,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 180,
+        "sent": 139,
+        "useful": 4,
+        "pct": 2.9
+      },
+      {
+        "t": 210,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 240,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 270,
+        "sent": 138,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 300,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 330,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 360,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 390,
+        "sent": 139,
+        "useful": 81,
+        "pct": 58.3
+      },
+      {
+        "t": 420,
+        "sent": 139,
+        "useful": 0,
+        "pct": 0.0
+      },
+      {
+        "t": 450,
+        "sent": 138,
+        "useful": 0,
+        "pct": 0.0
+      }
+    ],
+    "fail_reasons": {
+      "brave,duckduckgo,google cse,startpage,wikipedia": 2041,
+      "brave,duckduckgo,google cse,startpage": 16
+    },
+    "held": false
+  }
+]

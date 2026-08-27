@@ -1,0 +1,3 @@
+# SearXNG generates settings.yml on first start with a random server.secret_key.
+# It is per-deployment state, not source — never commit it.
+searxing/core-config/settings.yml
